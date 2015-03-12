@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class StaircasePrinter {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter the number of stairs you need: ");
+		int stairCase = scanner.nextInt();
+		
+		
+		while(stairCase != 4) {
+		     System.out.println("We do not have that model.");
+		     System.out.println("Please enter another number of stairs you need: ");
+		     
+		     stairCase = scanner.nextInt();
+		}
+		
+		if(stairCase == 4) {	
+			
+			System.out.println("            +---+");
+			System.out.println("            |   |");
+			System.out.println("        +---+---+");
+			System.out.println("        |   |   |");
+			System.out.println("    +---+---+---+");
+			System.out.println("    |   |   |   |");
+			System.out.println("+---+---+---+---+");
+			System.out.println("|   |   |   |   |");
+			System.out.println("+---+---+---+---+");
+		
+		
+			System.out.println("Here is your staircase!");	
+			
+		}
+		scanner.close();
+		
+	}
+}
