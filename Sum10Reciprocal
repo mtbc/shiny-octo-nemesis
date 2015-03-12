@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+
+public class Sum10Reciprocal {
+	public static void main(String[] args) {
+		
+				Scanner scan = new Scanner(System.in);
+
+				System.out.println("Let's play a game.");
+				System.out.println("You give me some numbers and I'll figure out " +
+						"the sum of their reciprocals. Doesn't that sound fun?");
+				System.out.println("Please make all numbers postive integers.");
+				System.out.println("What your first number?");
+				double input1 = scan.nextDouble();
+
+				System.out.println("Your next number?");
+				double input2 = scan.nextDouble();
+
+				System.out.println("Another one, please.");
+				double input3 = scan.nextDouble();
+
+				System.out.println("And another.");
+				double input4 = scan.nextDouble();
+
+				System.out.println("And one more.");
+				double input5 = scan.nextDouble();
+
+				System.out.println("I need another positive integer.");
+				double input6 = scan.nextDouble();
+
+				System.out.println("You guessed it - give me a number.");
+				double input7 = scan.nextDouble();
+
+				System.out.println("Almost done...give me another.");
+				double input8 = scan.nextDouble();
+
+				System.out.println("Trust me, it'll be worth it.  Another....");
+				double input9 = scan.nextDouble();
+
+				System.out.println("Last one, I promise.  Keep it postive.");
+				double input10 = scan.nextDouble();
+
+				double total = (1/input1 + 1/input2 + 1/input3 + 1/input4 + 1/input5 + 1/input6
+						+ 1/input7 + 1/input8 + 1/input9 + 1/input10);
+				
+				System.out.printf("Ta da!  The sum of the reciprocals from numbers you have entered equals ");
+				System.out.printf( String.format( "%.3f", total ) );
+				System.out.printf(".  Now aren't you impressed?");
+
+				
+	}
+}
