@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Sum10 {
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter a postive integer.");
+		int input1 = scan.nextInt();
+
+		System.out.println("Please enter another positive integer.");
+		int input2 = scan.nextInt();
+
+		System.out.println("Another one, please.");
+		int input3 = scan.nextInt();
+
+		System.out.println("And another.");
+		int input4 = scan.nextInt();
+
+		System.out.println("And one more.");
+		int input5 = scan.nextInt();
+
+		System.out.println("I need another positive integer.");
+		int input6 = scan.nextInt();
+
+		System.out.println("You guessed it - give me a number.");
+		int input7 = scan.nextInt();
+
+		System.out.println("Almost done...give me another.");
+		int input8 = scan.nextInt();
+
+		System.out.println("Trust me, it'll be worth it.  Another....");
+		int input9 = scan.nextInt();
+
+		System.out.println("Last one, I promise.  Keep it postive.");
+		int input10 = scan.nextInt();
+
+		int total = (input1 + input2 + input3 + input4 + input5 + input6
+				+ input7 + input8 + input9 + input10);
+
+		System.out.println("Ta da!  The sum of the numbers you have entered equals "
+						+ total + ".  Now aren't you impressed?");
+
+	}
+}
