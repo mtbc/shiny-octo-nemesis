@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class StairCaseVersion2 {
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		System.out.println("Welcome to Stairs-R-Us!");
+		System.out.println("Thank you for using our online service!");
+		System.out.println("Please enter the number of stairs you need: ");
+		int stairCase = scanner.nextInt();
+
+		switch (stairCase) {
+		case 1:
+			System.out.println("            +---+");
+			System.out.println("            |   |");
+			System.out.println("            +---+");
+			System.out.println("   ");
+			System.out.println("Here is your one step staircase!");
+			break;
+			
+		case 2:
+			System.out.println("            +---+");
+			System.out.println("            |   |");
+			System.out.println("        +---+---+");
+			System.out.println("        |   |   |");
+			System.out.println("        +---+---+");
+			System.out.println("   ");
+			System.out.println("Here is your two step staircase!");
+			break;
+			
+		case 3:
+			System.out.println("            +---+");
+			System.out.println("            |   |");
+			System.out.println("        +---+---+");
+			System.out.println("        |   |   |");
+			System.out.println("    +---+---+---+");
+			System.out.println("    |   |   |   |");
+			System.out.println("    +---+---+---+");
+			System.out.println("   ");
+			System.out.println("Here is your three step staircase!");
+			break;
+			
+		case 4:
+			System.out.println("            +---+");
+			System.out.println("            |   |");
+			System.out.println("        +---+---+");
+			System.out.println("        |   |   |");
+			System.out.println("    +---+---+---+");
+			System.out.println("    |   |   |   |");
+			System.out.println("+---+---+---+---+");
+			System.out.println("|   |   |   |   |");
+			System.out.println("+---+---+---+---+");
+			System.out.println("   ");
+			System.out.println("Here is your four step staircase!");
+			break;
+			
+		default:
+			System.out.println("I'm sorry, we do not currently stock " +
+					"staircases with " + stairCase + " steps." );
+			break;
+		}
+		System.out.println("Thank you for ordering with Stairs-R-Us!");
+		
+		scanner.close();
+	}
+}
