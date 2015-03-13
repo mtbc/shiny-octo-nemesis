@@ -1,0 +1,38 @@
+
+public class PyramidNumbers {
+	public static void main(String[] args) {
+		
+		//Using loops to make an numbers pyramid. Double whee!
+		
+				for (int x = 0; x <= 10; x++) {
+				
+						
+					for (int y = 10; y > x; y--) {
+						System.out.print(" ");
+					}
+					
+					for (int y = 1; y < x+1; y++) {
+						System.out.print(" " + y);
+						
+					}
+					
+					System.out.println();
+					
+				}
+				
+				for (int x = 9; x >= 0; x--) {
+					
+					for (int y = 10; y > x; y--) {
+						System.out.print(" ");
+					}
+					
+					for (int y = 1; y < x+1; y++) {
+						System.out.print(" " + y);
+						
+					}
+					
+					System.out.println();
+					
+				}
+	}
+}
