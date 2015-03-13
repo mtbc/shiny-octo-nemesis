@@ -1,0 +1,14 @@
+public class TicTacToeBoard {
+	public static void main(String[] args) {
+		
+		for (int ticTac = 0; ticTac < 3; ticTac++) {
+			
+			System.out.println("+---+---+---+");
+			System.out.println("|   |   |   |");
+		}
+		
+		System.out.println("+---+---+---+");
+		System.out.println("Here is your Tic Tac Toe board!");
+		
+	}
+}
