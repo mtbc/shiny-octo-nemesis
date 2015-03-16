@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+
+public class CountingLoop {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Hello! Let's list some numbers.");
+		System.out.println("What number shall we start with?");
+		int x = scan.nextInt();
+		
+		System.out.println("How high shall we count?");
+		int y = scan.nextInt();
+		
+		for (; x <= y; x++) {
+			System.out.printf("Number " + "%3d",x);
+			System.out.println("");			
+		}
+		
+		System.out.println();
+		System.out.println("Thanks! That was fun. :)");
+		
+	scan.close(); 
+	}
+}
