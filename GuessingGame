@@ -1,0 +1,47 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessingGame {
+	public static void main(String[] args) {
+
+		Random rand = new Random();
+		int numberToGuess = rand.nextInt(1000);
+		int numberOfTries = 0;
+		Scanner input = new Scanner(System.in);
+		int guess;
+		boolean win = false;
+		
+		
+		
+		System.out.println("Let's play a game!");
+		System.out.println("I'm thinking of a number between one and a thousand.");
+		System.out.println("Can you guess what number I'm thinking of?");
+		System.out.println();
+		System.out.println("Enter your first guess:");
+		
+		while (win == false) {
+				
+		guess = input.nextInt();
+		numberOfTries++;
+		
+		if (guess == numberToGuess) {
+			win = true;
+		}
+			else if(guess > numberToGuess) {
+			System.out.println("Sorry, that's too high.");
+			System.out.println("Guess again:");
+		}
+			else if(guess < numberToGuess) {
+			System.out.println("Nope...that's too low.");
+			System.out.println("Guess again:");
+		}
+		
+		}
+		
+		System.out.println("Congratulations! You got it!");
+		System.out.println("The number I was thinking of was " + numberToGuess);
+		System.out.println("and it took you " + numberOfTries + " tries.");
+		
+	input.close();	
+	}
+}
