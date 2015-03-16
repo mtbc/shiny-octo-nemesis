@@ -12,64 +12,62 @@ public class GuessingGame2 {
 		boolean win = false;
 		boolean newGame = false;
 		String reply;
-		
-		//These 5 lines represent starting dialogue with first game....		
+
+		// These 5 lines represent starting dialogue with first game....
 		System.out.println("Let's play a game!");
 		System.out.println("I'm thinking of a number between one and ten.");
 		System.out.println("Can you guess what number I'm thinking of?");
 		System.out.println();
 		System.out.println("Enter your first guess:");
-		
-		//Start of main game loop.
+
+		// Start of main game loop.
 		while (win == false) {
-				
-		guess = input.nextInt();
-		numberOfTries++;
-		
-		if (guess == numberToGuess) {
-			win = true;
+
+			guess = input.nextInt();
+			numberOfTries++;
+
+			if (guess == numberToGuess) {
+				win = true;
+			} else if (guess > numberToGuess) {
+				System.out.println("Sorry, that's too high.");
+				System.out.println("Guess again:");
+			} else if (guess < numberToGuess) {
+				System.out.println("Nope...that's too low.");
+				System.out.println("Guess again:");
+			}
+
 		}
-			else if(guess > numberToGuess) {
-			System.out.println("Sorry, that's too high.");
-			System.out.println("Guess again:");
-		}
-			else if(guess < numberToGuess) {
-			System.out.println("Nope...that's too low.");
-			System.out.println("Guess again:");
-		}
-		
-		}
-		
+
 		System.out.println("Congratulations! You got it!");
 		System.out.println("The number I was thinking of was " + numberToGuess);
 		System.out.println("and it took you " + numberOfTries + " tries.");
 		System.out.println();
 		System.out.println("Would you like to play again? Type yes or no.");
-		
-		//end of main game loop.
-		
-		//new scanner initiated because input didn't recognize String after
-		//being used on Int.
+
+		// end of main game loop.
+
+		// new scanner initiated because input didn't recognize String after
+		// being used on Int.
 		Scanner newInput = new Scanner(System.in);
 		reply = newInput.nextLine();
-		
-		if (reply .equals("yes")) {
-			//Starting dialogue for subsequent games....
+
+		if (reply.equals("yes")) {
+			// Starting dialogue for subsequent games....
 			System.out.println("Great!");
-			System.out.println("I'm thinking of a new number between one and ten.");
+			System.out
+					.println("I'm thinking of a new number between one and ten.");
 			System.out.println();
 			System.out.println("Enter your first guess:");
 
-			//Place to restart next game should go here!!!
-			
+			// Place to restart next game should go here!!!
+
 		}
-		
-			else {
+
+		else {
 			System.out.println("Okay, maybe another time.  Bye!");
-			
-			}
-		
-		
-	input.close();	
+
+		}
+
+		input.close();
 	}
 }
