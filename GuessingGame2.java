@@ -5,12 +5,9 @@ public class GuessingGame2 {
 	public static void main(String[] args) {
 
 		Random rand = new Random();
-		int numberToGuess = rand.nextInt(10);
-		int numberOfTries = 0;
 		Scanner input = new Scanner(System.in);
 		int guess;
-		boolean win = false;
-		boolean newGame = false;
+		boolean newGame;
 		String reply;
 
 		// These 5 lines represent starting dialogue with first game....
@@ -20,8 +17,12 @@ public class GuessingGame2 {
 		System.out.println();
 		System.out.println("Enter your first guess:");
 
+		do {
+			int numberToGuess = rand.nextInt(10);
+			int numberOfTries = 0;
 		// Start of main game loop.
-		while (win == false) {
+		boolean win = false;
+		do {
 
 			guess = input.nextInt();
 			numberOfTries++;
@@ -36,7 +37,7 @@ public class GuessingGame2 {
 				System.out.println("Guess again:");
 			}
 
-		}
+		} while (!win);
 
 		System.out.println("Congratulations! You got it!");
 		System.out.println("The number I was thinking of was " + numberToGuess);
@@ -46,12 +47,11 @@ public class GuessingGame2 {
 
 		// end of main game loop.
 
-		// new scanner initiated because input didn't recognize String after
-		// being used on Int.
-		Scanner newInput = new Scanner(System.in);
-		reply = newInput.nextLine();
+		input.nextLine();  // skip EOL after latest guess
+		reply = input.nextLine();
+		newGame = reply.equals("yes");
 
-		if (reply.equals("yes")) {
+		if (newGame) {
 			// Starting dialogue for subsequent games....
 			System.out.println("Great!");
 			System.out
@@ -67,6 +67,7 @@ public class GuessingGame2 {
 			System.out.println("Okay, maybe another time.  Bye!");
 
 		}
+		} while (newGame);
 
 		input.close();
 	}
